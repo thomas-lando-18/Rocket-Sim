@@ -152,6 +152,7 @@ class GetLocationData:
                 self.Pressure_0 = float(str.split(file_lines[n+1], ':')[1])
                 self.Temperature_0 = float(str.split(file_lines[n+2], ':')[1])
                 self.Altitude_0 = float(str.split(file_lines[n+3], ':')[1])
+                self.Density_0 = 1.225
 
     def get_environment(self):
         return self
@@ -164,11 +165,12 @@ class DimensionalInitialise:
         # for two dimensional analysis
         if n_dim == '2' or n_dim == 'two':
             self.x = 0
-            self.y = system.environmental_data.Altitude_0
+            self.y = system.environmental_data.location_data.Altitude_0
             self.theta = np.pi/2
             self.xd = 0
             self.yd = 0
             self.thetad = 0
+            self.mass = system.rocket_data.mass_0
         elif n_dim == '3' or n_dim == 'three':
             print('\nComing soon please start again and select \'2\' or \'two\'')
 
@@ -176,21 +178,27 @@ class DimensionalInitialise:
         return self
 
 
-class TwoDimensionSim:
-
-    def __init__(self, system):
-        time_final = float(input('State the time you wish to run the sim for: '))
-        system.time_vector =  np.linspace(0, time_final)
-
-        for n in range(len(system.time_vector)):
-
-
-
-    def get_state(self, state):
-        return state
-
-    def x_dim_change(self, system):
-
-    def y_dim_change(self, system):
-
-    def rotation_change(self, system):
+# class TwoDimensionSim:
+#
+#     def __init__(self, system):
+#         time_final = float(input('State the time you wish to run the sim for: '))
+#         system.time_vector =  np.linspace(0, time_final)
+#         system.dt = system.time_vector[1] - system.time_vector[0]
+#
+#
+#         for n in range(len(system.time_vector)):
+#             state = self.x_dim_change(system, n)
+#
+#
+#
+#     def get_state(self, state):
+#         return state
+#
+#     def x_dim_change(self, system, n):
+#         if n == 0:
+#             state.xdd = 1/system.initial_data.mass * (system.rocket_data.max_thrust  * np.cos(system.initial_data.theta) - 1/2 * system.xd ** 2 * 0.3 * np.cos(system.initial_data.theta)) #  system.rocket_data.)
+#
+#
+#     def y_dim_change(self, system):
+#
+#     def rotation_change(self, system):
