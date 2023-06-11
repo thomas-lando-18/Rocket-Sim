@@ -1,0 +1,7 @@
+README.md
+setup.py
+Rocket_Simulator.egg-info/PKG-INFO
+Rocket_Simulator.egg-info/SOURCES.txt
+Rocket_Simulator.egg-info/dependency_links.txt
+Rocket_Simulator.egg-info/entry_points.txt
+Rocket_Simulator.egg-info/top_level.txt
