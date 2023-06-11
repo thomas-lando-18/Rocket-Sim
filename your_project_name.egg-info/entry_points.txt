@@ -1,3 +1,0 @@
-[console_scripts]
-simulate = src.simulate.__main__
-

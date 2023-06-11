@@ -23,6 +23,7 @@ setup(
     entry_points={
         'console_scripts': [
             'simulate = src.simulate.__main__:main',
+            'design = src.design.__main__:main',
         ],
     },
 )
