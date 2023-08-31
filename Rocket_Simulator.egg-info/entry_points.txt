@@ -1,4 +1,0 @@
-[console_scripts]
-design = src.design.__main__:main
-simulate = src.simulate.__main__:main
-
