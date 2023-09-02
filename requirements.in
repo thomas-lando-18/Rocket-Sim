@@ -1,0 +1,11 @@
+numpy
+scipy
+matplotlib
+black
+pytest
+pylint
+flask
+gunicorn
+flasgger
+pip-tools
+gevent
