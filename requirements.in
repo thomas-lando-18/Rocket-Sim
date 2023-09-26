@@ -9,3 +9,6 @@ gunicorn
 flasgger
 pip-tools
 gevent
+plotly
+dash
+pandas
