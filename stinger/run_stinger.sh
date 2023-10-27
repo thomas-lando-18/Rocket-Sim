@@ -1,1 +1,0 @@
-gunicorn -b 0.0.0.0:8000 --reload -w 4 -k gevent main:stinger
